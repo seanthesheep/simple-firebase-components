@@ -1,7 +1,7 @@
 {
   "name": "simple-firebase-components",
   "private": false,
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Basic read/write firebase components",
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
