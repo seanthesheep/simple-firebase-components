@@ -1,13 +1,17 @@
 {
-  "name": "@stencil/starter",
-  "private": true,
-  "version": "0.0.1",
-  "description": "Stencil App Starter",
+  "name": "simple-firebase-components",
+  "private": false,
+  "version": "0.5.0",
+  "description": "Basic read/write firebase components",
+  "main": "dist/collection/index.js",
+  "types": "dist/collection/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
+  "browser": "dist/simple-firebase-components.js",
   "scripts": {
-    "build": "stencil build --prerender",
+    "build": "stencil build --prerenderer",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
@@ -26,14 +30,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
+    "url": "git+https://github.com/seanthesheep/simple-firebase-components"
   },
-  "author": "Ionic Team",
+  "author": "Sean Sullivan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
+    "url": "https://github.com/seanthesheep/simple-firebase-components"
   },
-  "homepage": "https://github.com/ionic-team/stencil",
+  "homepage": "https://github.com/seanthesheep/simple-firebase-components",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"

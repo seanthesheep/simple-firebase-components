@@ -1,52 +1,34 @@
-# Stencil App Starter
+# Simple Firebase Components
 
-Stencil is a compiler for building fast web apps using Web Components.
+Basic firebase components for creating, reading and updating firebase strings
 
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
+## setting up
 
-Stencil components are just Web Components, so they work in any major framework or with no framework at all. In many cases, Stencil can be used as a drop in replacement for traditional frontend frameworks given the capabilities now available in the browser, though using it as such is certainly not required.
+clone this repository and extract the dist folder for reference ie 
 
-Stencil also enables a number of key capabilities on top of Web Components, in particular Server Side Rendering (SSR) without the need to run a headless browser, pre-rendering, and objects-as-properties (instead of just strings).
+```<script src="dist/simple-firebase-components.js">```
 
-## Getting Started
+or include the npm hosted version
 
-To start a new project using Stencil, clone this repo to a new directory:
+```<script src="https://unpkg.com/simple-firebase-components@latest/dist/simple-firebase-components.js">```
 
-```bash
-git clone https://github.com/ionic-team/stencil-starter.git my-app
-cd my-app
-git remote rm origin
+
+create a new firebase project and include the api key and project id, as well as the
+name of the document you intend on creating or reading:
+
+```<!-- READ DATA -->
+<fb-string id="your-project-id" key="your-api-key" item="name-of-document"></fb-string>
 ```
 
-and run:
-
-```bash
-npm install
-npm start
+```<!-- SEND/UPDATE DATA -->
+<fb-content-editor id="your-project-id" key="your-api-key" doc="name-of-document">
 ```
 
-To view the build, start an HTTP server inside of the `/www` directory.
+firebase structure will consist of 'posts'->[your created document]->'data'
 
-To watch for file changes during development, run:
 
-```bash
-npm run dev
-```
+## editing the components
 
-To build the app for production, run:
-
-```bash
-npm run build
-```
-
-To run the unit tests once, run:
-
-```
-npm test
-```
-
-To run the unit tests and watch for file changes during development, run:
-
-```
-npm run test.watch
-```
+This project is built using StencilJS, a compiler for building web components. 
+To edit/build from these components, simply clone this repository and follow the
+instructions from the [StencilJS Documentation](https://stenciljs.com/docs/intro) 

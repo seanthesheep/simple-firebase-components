@@ -6,32 +6,69 @@
 
 import '@stencil/router';
 
-import { MyName as MyName } from './components/my-name/my-name';
 
-interface HTMLMyNameElement extends MyName, HTMLElement {
-}
-declare var HTMLMyNameElement: {
-  prototype: HTMLMyNameElement;
-  new (): HTMLMyNameElement;
-};
+import {
+  FbContentEditor as FbContentEditor
+} from './components/fb-content-editor/fb-content-editor';
+
 declare global {
+  interface HTMLFbContentEditorElement extends FbContentEditor, HTMLElement {
+  }
+  var HTMLFbContentEditorElement: {
+    prototype: HTMLFbContentEditorElement;
+    new (): HTMLFbContentEditorElement;
+  };
   interface HTMLElementTagNameMap {
-      "my-name": HTMLMyNameElement;
+    "fb-content-editor": HTMLFbContentEditorElement;
   }
   interface ElementTagNameMap {
-      "my-name": HTMLMyNameElement;
+    "fb-content-editor": HTMLFbContentEditorElement;
   }
   namespace JSX {
-      interface IntrinsicElements {
-          "my-name": JSXElements.MyNameAttributes;
-      }
+    interface IntrinsicElements {
+      "fb-content-editor": JSXElements.FbContentEditorAttributes;
+    }
   }
   namespace JSXElements {
-      export interface MyNameAttributes extends HTMLAttributes {
-        
-          first?: any,
-          last?: any
-      }
+    export interface FbContentEditorAttributes extends HTMLAttributes {
+      
+        id?: any,
+        key?: any,
+        doc?: any
+    }
+  }
+}
+
+
+import {
+  FbString as FbString
+} from './components/fb-string/fb-string';
+
+declare global {
+  interface HTMLFbStringElement extends FbString, HTMLElement {
+  }
+  var HTMLFbStringElement: {
+    prototype: HTMLFbStringElement;
+    new (): HTMLFbStringElement;
+  };
+  interface HTMLElementTagNameMap {
+    "fb-string": HTMLFbStringElement;
+  }
+  interface ElementTagNameMap {
+    "fb-string": HTMLFbStringElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "fb-string": JSXElements.FbStringAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface FbStringAttributes extends HTMLAttributes {
+      
+        id?: any,
+        key?: any,
+        item?: string
+    }
   }
 }
 

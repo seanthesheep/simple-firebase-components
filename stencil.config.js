@@ -1,6 +1,9 @@
 exports.config = {
+  namespace: 'simple-firebase-components',
+  generateDistribution: true,
+  generateWWW: false,
   bundles: [
-    { components: ['my-name'] }
+    { components: ['fb-string', 'fb-content-editor'] }
   ],
   collections: [
     { name: '@stencil/router' }
