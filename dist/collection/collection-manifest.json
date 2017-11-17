@@ -1,0 +1,73 @@
+{
+  "components": [
+    {
+      "tag": "fb-content-editor",
+      "componentClass": "FbContentEditor",
+      "componentPath": "components/fb-content-editor/fb-content-editor.js",
+      "props": [
+        {
+          "name": "doc",
+          "type": "any"
+        },
+        {
+          "name": "id",
+          "type": "any"
+        },
+        {
+          "name": "key",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "tag": "fb-string",
+      "componentClass": "FbString",
+      "componentPath": "components/fb-string/fb-string.js",
+      "props": [
+        {
+          "name": "id",
+          "type": "any"
+        },
+        {
+          "name": "item",
+          "type": "string"
+        },
+        {
+          "name": "key",
+          "type": "any"
+        }
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "components": [
+        "fb-content-editor",
+        "fb-string"
+      ]
+    },
+    {
+      "components": [
+        "stencil-async-content",
+        "stencil-route",
+        "stencil-route-link",
+        "stencil-route-title",
+        "stencil-router",
+        "stencil-router-redirect"
+      ]
+    },
+    {
+      "components": [
+        "test-app",
+        "test-demo-four",
+        "test-demo-six",
+        "test-demo-three"
+      ]
+    }
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.0.8-5",
+    "typescriptVersion": "2.6.1"
+  }
+}
