@@ -1,6 +1,6 @@
 # Simple Firebase Components
 
-Basic firebase components for creating, reading and updating firebase strings
+Basic firebase components for creating, reading and updating firebase strings and HTML
 
 ## setting up
 
@@ -8,12 +8,12 @@ clone this repository and extract the dist folder for reference ie
 
 ```<script src="dist/simple-firebase-components.js">```
 
-or include the npm hosted version
+or include the npm hosted version between the <head> tags of your HTML document
 
 ```<script src="https://unpkg.com/simple-firebase-components@latest/dist/simple-firebase-components.js">```
 
 
-create a new firebase project and include the api key and project id, as well as the
+create a new firebase project and copy the api key and project id. Include these in the component's properties, as well as the
 name of the document you intend on creating or reading:
 
 ```<!-- READ DATA -->
